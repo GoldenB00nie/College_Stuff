@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Cadastro</title>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width">
+        <style>
+          #separar {
+            margin: 5px;
+            font-weight: bold;
+          }
+        </style>
+    </head>
+
+	<!-- Nome, dt-nasc, sexo, rg* [numero, dt-expedicao, UF],
+	CPF, Endereço* [logradouro, numero, complemento, bairro, localidade,
+	UF, CEP], telefone -->
+
+	<body>
+		<fieldset> <legend><h1>Cadastro</h1></legend>
+
+			<form action="Realizado.html">
+				<fieldset> <legend><h2>Informações pessoais</h2></legend>
+					
+          <div id="separar">Nome: <input type="text" value="" maxlength="65"></div>
+          <div id="separar">Email: <input type="email" value="" maxlength="100"></div>
+          <div id="separar">Telefone: <input type="tel" value="" maxlength="9"></div> <br>
+
+					<div id="separar">Data de nascimento: <input type="date" value=""></div>
+          <div id="separar">Sexo: <input type="radio" name="sexo" value=""> Masculino | Feminino <input type="radio" name="sexo" value=""></div> <br>
+
+          <fieldset> <legend><strong>Endereço</strong></legend>
+
+            <div id="separar">Logradouro: <input type="text" maxlength="60" value=""></div>
+            <div id="separar">Número: <input type="number" min="0" max="100" value=""></div>
+            <div id="separar">Complemento: <input type="text" maxlength="60" value=""></div>
+            <div id="separar">Bairro: <input type="text" maxlength="60" value=""></div>
+            <div id="separar">Localidade: <input type="text" maxlength="60" value=""></div>
+
+          </fieldset>
+
+				</fieldset>
+
+        <fieldset> <legend><h2>Documentações</h2></legend>
+          
+          <div id="separar">CPF: <input type="text" minlength="11" maxlength="14" value=""></div>
+          <fieldset><legend><strong>RG</strong></legend>
+            <div id="separar">Número: <input type="text" minlength="9" maxlength="12" value=""></div>
+            <div id="separar">Unidade Federativa: <input type="text" maxlength="30" value=""></div>
+            <div id="separar">Data de expedição: <input type="date" value=""></div>
+          </fieldset>
+
+        </fieldset>
+
+        <input type="reset"> <input type="submit" style="margin:20px 5px;">
+			</form>
+		</fieldset>
+    </body>
+</html>

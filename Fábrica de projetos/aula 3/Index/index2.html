@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição de Dados</title>
+</head>
+<body>
+    <h1>Dados Armazenados</h1>
+    <p>Nome: <span id="nome"></span></p>
+    <p>Data de Nascimento: <span id="dtNasc"></span></p>
+    <p>Sexo: <span id="sexo"></span></p>
+    <p>RG: <span id="rg"></span></p>
+    <p>Número do RG: <span id="numeroRG"></span></p>
+    <p>Data de Expedição: <span id="dtExp"></span></p>
+    <p>UF do RG: <span id="ufRG"></span></p>
+    <p>CPF: <span id="cpf"></span></p>
+    <p>Endereço: <span id="endereco"></span></p>
+    <p>Logradouro: <span id="logradouro"></span></p>
+    <p>Número: <span id="numero"></span></p>
+    <p>Complemento: <span id="complemento"></span></p>
+    <p>Bairro: <span id="bairro"></span></p>
+    <p>Localidade: <span id="localidade"></span></p>
+    <p>UF: <span id="uf"></span></p>
+    <p>CEP: <span id="cep"></span></p>
+    <p>Telefone: <span id="telefone"></span></p>
+    <p>E-mail: <span id="email"></span></p>
+
+    <button id="reloadButton">Recarregar Dados</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function exibirDados() {
+                document.querySelector("#nome").textContent = localStorage.getItem("nome") || "Não disponível";
+                document.querySelector("#dtNasc").textContent = localStorage.getItem("dtNasc") || "Não disponível";
+                document.querySelector("#sexo").textContent = localStorage.getItem("sexo") || "Não disponível";
+                document.querySelector("#rg").textContent = localStorage.getItem("rg") || "Não disponível";
+                document.querySelector("#numeroRG").textContent = localStorage.getItem("numeroRG") || "Não disponível";
+                document.querySelector("#dtExp").textContent = localStorage.getItem("dtExp") || "Não disponível";
+                document.querySelector("#ufRG").textContent = localStorage.getItem("ufRG") || "Não disponível";
+                document.querySelector("#cpf").textContent = localStorage.getItem("cpf") || "Não disponível";
+                document.querySelector("#endereco").textContent = localStorage.getItem("endereco") || "Não disponível";
+                document.querySelector("#logradouro").textContent = localStorage.getItem("logradouro") || "Não disponível";
+                document.querySelector("#numero").textContent = localStorage.getItem("numero") || "Não disponível";
+                document.querySelector("#complemento").textContent = localStorage.getItem("complemento") || "Não disponível";
+                document.querySelector("#bairro").textContent = localStorage.getItem("bairro") || "Não disponível";
+                document.querySelector("#localidade").textContent = localStorage.getItem("localidade") || "Não disponível";
+                document.querySelector("#uf").textContent = localStorage.getItem("uf") || "Não disponível";
+                document.querySelector("#cep").textContent = localStorage.getItem("cep") || "Não disponível";
+                document.querySelector("#telefone").textContent = localStorage.getItem("telefone") || "Não disponível";
+                document.querySelector("#email").textContent = localStorage.getItem("email") || "Não disponível";
+            }
+
+            exibirDados();
+
+            document.querySelector("#reloadButton").addEventListener("click", exibirDados);
+        });
+    </script>
+</body>
+</html>

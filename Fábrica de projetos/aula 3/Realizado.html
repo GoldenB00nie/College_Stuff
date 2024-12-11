@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro realizado</title>
+</head>
+
+<body>
+    <div>
+
+        <h1>Dados Armazenados</h1>
+    <p id="Nome"></p>
+    <p id="Email"></p>
+    <p id="Telefone"></p>
+    <p id="DtNasc"></p>
+    <p id="Sexo"></p>
+    <p id="Logradouro"></p>
+    <p id="NumRG"></p>
+    <p id="Complemento"></p>
+    <p id="Bairro"></p>
+    <p id="Localidade"></p>
+    <p id="DtExp"></p>
+    <p id="_CPF"></p>
+    <p id="_CNH"></p>
+    <p id="_NIS"></p>
+    <p id="Cert_Reser"></p>
+    <p id="Titulo_Eleit"></p>
+    <p id="Num"></p>
+    <p id="_UF"></p>
+    <p id="DtExp"></p>
+
+    <button id="reloadButton">Recarregar Dados</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const nome = urlParams.get('nome');
+            const email = urlParams.get('email');
+            const telefone = urlParams.get('telefone');
+            const dtNasc = urlParams.get('dtNasc');
+            const sexo = urlParams.get('sexo');
+            const logradouro = urlParams.get('logradouro');
+            const numRG = urlParams.get('numRG');
+            const complemento = urlParams.get('complemento');
+            const bairro = urlParams.get('bairro');
+            const localidade = urlParams.get('localidade');
+            const CPF = urlParams.get('CPF');
+            const CNH = urlParams.get('CNH');
+            const NIS = urlParams.get('NIS');
+            const cert_Reser = urlParams.get('cert_Reser');
+            const titulo_Eleit = urlParams.get('titulo_Eleit');
+            const num = urlParams.get('num');
+            const UF = urlParams.get('UF');
+            const dtExp = urlParams.get('dtExp');
+            document.getElementById('Nome').textContent = `Nome: ${nome}`;
+            document.getElementById('Email').textContent = `Email: ${email}`;
+            document.getElementById('Telefone').textContent = `Telefone: ${telefone}`;
+            document.getElementById('DtNasc').textContent = `Data de Nascimento: ${dtNasc}`;
+            document.getElementById('Sexo').textContent = `Sexo: ${sexo}`;
+            document.getElementById('Logradouro').textContent = `Logradouro: ${logradouro}`;
+            document.getElementById('NumRG').textContent = `Número do RG: ${numRG}`;
+            document.getElementById('Complemento').textContent = `Complemento: ${complemento}`;
+            document.getElementById('Bairro').textContent = `Bairro: ${bairro}`;
+            document.getElementById('Localidade').textContent = `Localidade: ${localidade}`;
+            document.getElementById('_CPF').textContent = `CPF: ${CPF}`;
+            document.getElementById('_CNH').textContent = `CNH: ${CNH}`;
+            document.getElementById('_NIS').textContent = `NIS/PIS/PASEP: ${NIS}`;
+            document.getElementById('Cert_Reser').textContent = `Certificado de Reservista: ${cert_Reser}`;
+            document.getElementById('Titulo_Eleit').textContent = `Título de Eleitor: ${titulo_Eleit}`;
+            document.getElementById('Num').textContent = `Número: ${num}`;
+            document.getElementById('_UF').textContent = `UF: ${UF}`;
+            document.getElementById('DtExp').textContent = `Data de expedição: ${dtExp}`;
+        }
+    </script>
+</body>
+
+</html>
