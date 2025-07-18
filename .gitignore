@@ -1,12 +1,4 @@
-Interfaces Imersivas
-Oficina de impressão 3D
 Programação orientada a objetos
-Processo de desenvolvimento de software
 técnicas de programacão e análise de algoritimos/update-vscode.sh
-técnicas de programacão e análise de algoritimos/**/*.exe
 **/.vscode
 *.ini
-Banco de dados/**
-!Banco de dados/**.sql
-!Banco de dados/Aula Prática 0[459]
-!Banco de dados/Aula Prática 0[459]/*

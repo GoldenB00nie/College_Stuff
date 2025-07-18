@@ -1,0 +1,16 @@
+Como uma clínica veterinária,
+Eu quero um melhor sistema de agendamentos,
+Para que não haja sobreposição de horários e eu possa manejar melhor a disponibilidade de meus funcionários,
+Eu quero visualisar e manejar o estoque de medicamentos e produtos,
+Para que evite a indisponibilidade de itens e desperdício de produtos vencidos,
+Eu quero um sistema de lembretes para os nossos clientes,
+Para que evite mal uso dos veterinários
+
+
+
+
+
+atlassian
+clickup
+projectlibre
+trello

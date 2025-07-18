@@ -1,0 +1,89 @@
+Resumo: Optimization of tool-path generation for material extrusion-based additive manufacturing technology
+
+Abstract:
+
+	A abordagem proposta explora a geração de caminhos paralelamente direcionados para preenchimentos de areas conectadas simples através de três passos:
+1. Determinando a inclinação das linhas de referência,
+2. Gerando e agrupando segmentos do caminho da ferramenta em sub-caminhos individuais,
+3. Vinculando sub-caminhos com requisitos específicos.
+
+Esses três módulos interagem uns com os outros para afetar na eficiência e acúracia da manufatura aditiva. Diversos angulos de fabricação foram análisados a fim de achar o ângulo ideal para melhor eficiência e acúrácia na fabricacão
+
+
+
+
+
+
+para achar o melhor caminho para extrusao de materia, temos que verificar 3 objetivos:
+
+1) Achar um equilibrio entre fabricacao de qualidade e eficencia da maquina para achar a inclinacao adequada
+2) minimizar o numero de sub-caminhos para o bico nao ficar desligando e ligando
+3) achar uma ordem apropriada para sub-caminhos para minimizar tempo parado em caminhos sem cortes
+
+
+
+
+
+
+
+minha parte:
+
+No artigo é adotado caminho de contorno paralelo para depositar limites para conseguir uma camada superficial decente, enquanto o interior é depositado com caminho de direcao paralela para sua alta eficiencia e implementacao simples.
+
+A complexidade e dificuldade da geracao de caminho de contorno paralelo é principalmente determinado pelo algorítmo de deslocamento, portando nenhuma otimizacao consegue ser realizada para melhorar a eficiencia da maquina e aumentar a qualidade de fabricacao, porém a estratégia do caminho de direcao paralela ainda pode ser pesquisada devido sua flexibilidade e variacao. Dois fatores essenciais para serem considerados nessa estrategia sao:
+1) Angulo de inclinacao das linhas de referencia: é o angulo das linhas de referencia comparado ao eixo x, e podem ser de 0 a 180 graus
+2) Conexao (linking) entre elementos da ferramenta de caminho: A ligacao realizada para conectar dois sub-caminhos 
+
+Alguns algoritmos propostos serviam bem para processos de fresagem, porém nao conseguiam resolver problemas de planejamento do caminho da ferramenta para manufatura aditiva porque desconsideravam impactos exercidos pelo bico, material e outros. A proposta nesse artigo otimiza a estrategia de conexao entre sub-caminhos ao balancear a minimizacao do tempo sem impressao e aquisicao de qualidade
+
+3.1 Determinando a inclinacao
+
+Por causa da existencia de diversos segmentos pequenos, o bico tem que diminuir sua velocidade a fim de evitar erros de maquina em extremidades, entao, desde que a velocidade do bico nao chegue a 0, o caminho de preenchimento nao irá ser diferente da desejada, portanto, minimizar o numero de cantos pode melhorar a produtividade da maquina ao maximizar a media de comprimento do caminho da ferramenta, que permite velocidade constante, além de que o bico tem que parar a deposicao de material nesses lugares.
+
+3.1.1 Estrategia baseada em prioridade em eficiencia
+
+O perfil da taxa de alimentacao precisa levar em consideracao a aceleracao e desaceleracao por conta que ela varia conforme o caminho, e a aceleracao e desaceleracao é resultado de da existencia de quinas no caminho da ferramenta. A taxa de alimentacao em um canto é correlacionado ao angulo entre o segmento de caminho adjacente, com a suposicao de que ela nao mudaria no local de desvio, e o vetor da variacao de alimentacao (delta F) é calculado a partir de 2 * F * sen(alfa/2), onde F é a taxa de alimentacao na quina e o alfa é o angulo entre o segmento de linha atual para o adjacente.
+
+Para obter uma taxa de alimentacao continua, uma funcao antecipada pode ser adotada em determinar o perfil da taxa de alimentacao caso ela possa encontrar uma rapida desaceleracao, que é prejudicial para maquinas. No módulo, a taxa de alimentacao sao determinadas antecipadamente de acordo com as propriedades dinamicas e as caracteristicas da geometria, e o perfil é gerado baseado tanto na taxa pré-determinada e na estratégia de aceleracao e desaceleracao.
+
+Existem dois tipos de caminhos da ferramenta no preenchimento do interior, os que depositam material e os que nao. O objetivo é conectar caminhos individuais de deposicao em uma única camada e depois fazer fazer a conexao das outras camadas. Ao analizar o tempo de construcao, assumimos que o comprimento de conexao entre dois sub-caminhos é 0, o que significa que a taxa de alimentacao fim e inicio de cada sub-caminho é o máximo.
+
+A determinacao da inclinacao baseado na prioridade de taxa de alimentacao é realizado a partir do tempo de manufaturamento de cada angulo especifico. No caso, foi realizado experimentos em 10 em 10 graus de 0 a 180 graus e 19 amostras foram coletadas. Após ter adquirido o comprimento do caminho e o tempo de construcao, esses dados foram usados para interpolar uma curva para achar uma eficiencia de inclinacao satisfatória, que a partir do gráfico, ficou por volta de 60 graus.
+
+3.1.2 Estratégia baseada em prioridade em qualidade
+
+Para achar a melhor inclinacao a fim de valorizar a qualidade de deposicao, um modelo de análise apropriado é necessario, e baseado na análise anterior, variacoes na taxa de alimentacao pode gerar deposicao e rugosidade de material desigual. Além disso, quinas podem piorar a qualidade da fabricacao através de areas com pouco ou muito preenchimento.
+
+A area com muito preenchimento em uma borda é equivalente a area de pouco preenchimento, e ela pode ser obtida atraves da subtracao de um setor com dois triangulos retangulos, descrito pelas duas funcoes:
+1) Sunderfill = Soverfill = Sdelta(OPQ1) + Sdelta(OPQ2) - Ssector(OQ1Q2)
+2) Sunderfill = Soverfill = r^2 * cotan(theha / 2) - ((pi - theta) * pi r2) / 2pi = 
+= r^2(cotan(theta / 2) + theta / 2 - pi / 2)
+
+onde r é metade do comprimento do caminho e theta é o angulo entre dois segmentos de caminhos adjacentes. Da equaçao dois, é possivel obter a correlacao entre a area S e o angulo theta ao plotar um gráfico, e ele mostra que angulos menores podem deixar mais areas com pouco ou muito preenchimento, logo, a qualidade de fabricacao também é afetada de certo modo pelo angulo de inclinacao. Entao a análise indica que o objetivo é reduzir a quantidade de bordas bruscas no caminho da ferramenta para reduzir a quantidade de areas com pouco ou muito preenchimento e obter uma melhor qualidade.
+
+Similarmente a outra proposta, as areas de pouco ou muito preenchimento podem ser calculadas com a equacao 2 e a melhor inclinacao baseada em prioridade a qualidade pode ser obtida atraves da interpolacao de diversas amostras de inclinacoes para formar um grafico. A partir dele, foi encontrado que o melhor angulo de inclinacao foi entre 110 graus, onde as areas com pouca ou muita extrusao foram menores.
+
+3.2 Conectando sub-caminhos individuais
+
+Depois de determinada a melhor inclinaçao baseada em prioridades diferentes, varios sub-caminhos sao gerados de acordo com o numero de intersecçoes entre as linhas de referencia e os limites, depois, cada area é dividida em outras areas individuais baseado no número de particoes de cada parte. Nao é bom gerar caminhos da peça individuais para cada sub-caminho porque isso faz a ferramenta ficar ligando e desligando, entao, o melhor é conectar os sub-caminhos, sem comprometer a qualidade. E como cada sub-caminho pode ter quatro pontos de inicio, todos eles tem que ser levados em consideracao, sendo assim, eles sao classificados em grupos antecipadamente.
+
+Primeiramente, todos os limites, incluindo os externos e internos, sao numerados. Depois, uma estrutura é feita contendo as informacoes dos quatro potenciais pontos em uma sub-regiao, e a ordem deles é feita a partir do primeiro ponto na primeira linha de referencia e o segundo ponto no final dela. Se o número de linhas de referencia for par na subregiao, o ponto tres é definido no inicio da linha e o quatro no final, porem se for impar, eles trocam de posicoes. Dessa forma, se o ponto um for o inicio do caminho da sub-regiao, o ponto tres será o ultimo, e se o ponto dois for o inicio, entao o ponto quatro será o final.
+
+Ao mesmo tempo, cada ponto possui um indice do limite(boundaryindex) que representa o indice que o limite que contem o ponto possui, e o indice do ponto(pointindex), o indice do ponto do limite que contem ele, determinado de acordo com sua posicao no limite, onde sao incrementados no sentido horario, dessa forma, apenas dois pontos com indices adjacentes podem ser conectados.
+
+Existem tres criterios para os candidatos de pontos conectaveis:
+1) Os dois tem que estar em uma distancia perpendicular de duas linhas de varreduras, que é a distancia entre duas linhas de varreduras adjacentes.
+2) Os dois pontos tem que estar em um mesmo limite, o que significa que os dois tem que ter o mesmo boundaryindex.
+3) A distancia entre seus pointindex deve denotar que eles sao pontos de interseccao adjacentes no mesmo limite, ou seja, um deles é o primeiro e o outro é o ultimo pointindex daquele limite.
+
+se tiver um ponto conectavel, eles sao conectados, porem se nao forem, eles sao pulados. Depois do processo de conexao, algumas sub-regioes sao mutuamente conectados e o numero de sub-caminhos é reduzido, porém há um outro metodo de otimizacao que reduz ainda mais o numero de sub-caminhos depois desse processo.
+
+Quando pegamos sempre o primeiro elemento, reconhecemos ele como o ponto de inicio da sub-regiao, porem alguns sub-caminhos que deveriam ser adicionados, nao foram por causa da escolha do elemento inicial. Se o inicio for alterado para o fim do primeiro segment de linha, alguns sub-caminhos poderao ser conectados, com menos caminhos cortados. O objetivo é achar alguns sub-caminhos conectáveis ao alterar o ponto de inicio, porém alguns realmente nao sao possiveis alterar, pois senao a primeira conexao seria quebrada. As condicoes para fazer isso sao:
+1) Todas as extremidades a esquerda tem que ter o mesmo boundaryindex, e todos os da direita tambem devem cumprir isso
+2) O pointindex de todos os pontos da esquerda ou direita finaliza em sucessao
+
+apos isso, alguns sub-caminhos podem nao ter sidos conectados, porem o numero de sub-caminhos pode ter sido otimizado. E depois, nao há nenhuma outra otimizacao para reduzir o numero ainda mais. O ultimo passo é conectar os sub-caminhos com caminhos nao cortados, e o objetivo é minimizar o comprimento desses caminhos, sendo que o cabecote precisa viajar para cada ponto de inicio apenas uma vez.
+
+Apesar de similar, esse problema nao pode ser resolvido com algoritmos de Traveling Salesman Problem(TSP) por causa da diferença entre o ponto inicial e final enquanto estiver viajando um caminho. Entao, um algoritmo greedy(ou guloso) para criar a sequencia de sub-caminhos, que acha o melhor caminho no momento, sem considerar o futuro.
+
+Se os sub-caminhos forem conectados com linhas baseado em ordem determinadas, as extremidades ficariam com má qualidade por causa da aceleracao e desaceleracao. Por isso, um tipo de curva parametrica é chamado de spline, e é introduzido nesse artigo para conectar sub-caminhos. Duas pontas sao definidas para ser tangentes a segmentos de linhas de dois sub-caminhos, o que significa que a taxa de alimentacao nao precisa mudar, entao a aceleracao e desaceleracao nesses locais sao evitados. Quando o numero de caminhos nao cortados é muito grande, essa estrategia pode melhorar significativamente a qualidade de deposicao.

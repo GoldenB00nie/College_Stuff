@@ -1,0 +1,98 @@
+Por que a disciplina é importante?
+A disciplina de Processo de Desenvolvimento de Software é fundamental para a formação de profissionais de TI, pois aborda métodos e práticas essenciais para o desenvolvimento eficiente e eficaz de sistemas de software.
+
+Um projeto é um esforço temporário que tem como finalidade um resultado único e possui recursos delimitados. Iniciado com a intenção de criar um novo produto ou serviço ou aprimorar algo já existente. Deve haver um escopo inicial do projeto
+
+Já processo, é tudo aquilo que tem atividades repetitivas, que possui um esforço contínuo sem tempo determinado e que não possui um resultado único.
+
+Um projeto de sistemas traduz para o papel como serão atendidas as requisições dos clientes que precisam de uma solução tecnológica. Seu objetivo é definir e detalhar um modelo de software que seja viável e capaz de solucionar as necessidades do cliente.
+
+Os projetos são divididos em fases, conforme recomendado pelo PMBOK.
+• Início: definição do escopo e dos objetivos.
+• Planejamento: criação de cronogramas, orçamentos e alocação de recursos.
+• Execução: realização das atividades previstas.
+• Monitoramento: acompanhamento do progresso.
+• Encerramento: entrega do resultado e documentação final.
+
+O ciclo de vida do software é um processo sistemático usado por equipes de desenvolvimento para criar software de alta qualidade. Este processo divide o desenvolvimento em fases distintas, facilitando o gerenciamento e a otimização dos recursos
+{
+	• Fase 1 - Planejamento = a equipe de desenvolvimento define o escopo do projeto, os objetivos, os requisitos e os recursos necessários, como a identificação das partes interessadas, o orçamento e o cronograma.
+- O objetivo final desta fase é criar uma visão clara do que será desenvolvido e como será alcançado.
+
+	• Fase 2 - Análise de requisitos = a equipe se concentra em compreender completamente as necessidades dos usuários e as especificações do sistema. Isso envolve a coleta de informações por meio de entrevistas, pesquisa de mercado e análise de documentos existentes.
+- O objetivo é definir claramente os recursos e funcionalidades que o software deve ter.
+
+	• Fase 3 - Projeto = A equipe desenvolve a estrutura geral para o sistema (o design de interface do usuário (UI) e de experiência do usuário (UX), diagramas de fluxo, esquemas de banco de dados e a definição de algoritmos).
+- Objetivo é garantir que o software seja eficiente, escalável e capaz de atender aos requisitos estabelecidos na fase de análise de requisitos.
+
+	• Fase 4 - Implementação = A fase de implementação é quando o código real é escrito. Os desenvolvedores de software traduzem o projeto e o design em código de computador.
+
+- Durante esse processo, é essencial seguir as melhores práticas de codificação, garantir a legibilidade do código e realizar testes unitários para identificar e corrigir erros o mais cedo possível.
+
+	• Fase 5 - Teste = Após a implementação, o software passa por um processo de teste rigoroso. O objetivo é identificar e corrigir defeitos, garantindo que o software funcione conforme o esperado.
+
+- Os testes são repetidos até que todos os problemas sejam resolvidos e o software atenda aos critérios de qualidade estabelecidos.
+
+	• Fase 6 - Implatação = Com o software testado e aprovado, é hora de implantá-lo para uso pelos usuários finais. Isso envolve a instalação do software em servidores, a configuração de sistemas e a disponibilização para os usuários. A implantação também pode incluir a migração de dados de sistemas antigos, treinamento de usuários e a criação de documentação.
+
+	• Fase 7 - Manutenção e evolução = O ciclo de vida do desenvolvimento de software não se encerra com a implantação. Na verdade, a fase de manutenção e evolução é contínua. Os desenvolvedores continuam monitorando o software em produção, identificando e corrigindo problemas conforme surgem. Além disso, o software pode precisar de atualizações para adicionar novos recursos.
+
+}
+
+Software é qualquer conjunto de instruções que direciona o processador de um computador a executar operações específicas.
+
+Um produto de software é um sistema ou aplicação desenvolvida com o propósito de atender a necessidades específicas de usuários ou resolver problemas específicos.
+
+1.Por Tipo de Aplicação
+2.Por Modelo de Distribuição
+3.Por Modelo de Negócio
+4.Por Domínio de Aplicação
+5.Por Forma de Implementação
+
+Um processo pode ser definido por uma atividade ou um grupo de atividades que são estruturadas de modo que após a sua finalização, seja entregue um produto ou um serviço.
+
+• Processo Cascata = É um dos processos mais tradicionais e lineares, onde o desenvolvimento ocorre em fases sequenciais. Cada fase deve ser concluída antes que a próxima comece.
+
+- Metodologia espiral = Combina elementos do modelo Cascata e prototipagem, focando na análise de riscos e permitindo revisões ao longo do desenvolvimento.
+
+• Processo Iterativo e Incremental = Divide o desenvolvimento em pequenas partes (iterações). Cada iteração inclui atividades de requisitos, design, implementação e testes, resultando em incrementos de software.
+
+• Processo Ágil (Agile) = Focado na flexibilidade e na resposta rápida a mudanças, com ciclos curtos de desenvolvimento (sprints) e entregas contínuas de software funcional.
+
+- Principais vantagens: Redução de erros e riscos.
+- Os 4 principais tipos de metodologias ágeis:
+	1. Kanban = Sistema visual de gestão de trabalho ou do fluxo de produção em empresas e projetos que utiliza cartões coloridos (ou post-its)
+	2. Scrum = Os profissionais conseguem trabalhar de maneira conjunta para resolver problemas complexos de uma maneira criativa e adaptável. O que trará resultados de alto valor para a empresa.
+	3. Lean = Bastante utilizada no empreendedorismo. Ela foca em identificar e eliminar os desperdicios dentro de uma empresa. Utiliza apenas o necessário para reduzir custos, melhorar o processo, entregas e produtividade
+	4. Smart = Definir metas e objetivos que sejam realmente importantes e relevantes para sua empresa.
+
+• Processo DevOps = Integra o desenvolvimento (Dev) e operações (Ops) para automação de processos, monitoramento contínuo, e entrega rápida de software. Promove a colaboração entre desenvolvedores e profissionais de operações.
+
+principios:
+1 – Satisfação do cliente: A maior prioridade está em satisfazer o cliente por meio da entrega adiantada e contínua de software de valor.
+2 – Mudança em favor da vantagem competitiva: Mudanças de requisitos são bem-vindas, mesmo em fases tardias do desenvolvimento.
+3 – Prazos curtos: Entregar software em funcionamento com frequência, desde a cada duas semanas até a cada dois meses,
+com uma preferência por prazos mais curtos.
+4 – Trabalho em conjunto: Tanto pessoas relacionadas a negócios como desenvolvedores devem trabalhar em conjunto, diariamente, durante todo o curso do projeto.
+5 – Ambientação e suporte: Para construir projetos ao redor de indivíduos motivados, é preciso dar a eles o ambiente e o suporte necessários, confiando que farão seu trabalho.
+6 – Falar na cara: O método mais eficiente de transmitir informações tanto externas como internas para um time de desenvolvimento é por meio de uma conversa cara a cara.
+7 – Funcionalidade: Um software funcional é a medida primária de progresso.
+8 – Ambiente de sustentabilidade: Processos ágeis promovem um ambiente sustentável, com patrocinadores, desenvolvedores e usuários sendo capazes de manter passos constantes.
+9 – Padrões altos de tecnologia e design: A contínua atenção à excelência técnica e ao bom design aumenta a agilidade.
+10 – Simplicidade: Fazer algo simples é dominar a arte de maximizar a quantidade de trabalho que não precisou ser feito.
+11 – Autonomia: As melhores arquiteturas, os requisitos e os designs emergem de times auto-organizáveis.
+12 – Reflexões para otimizações: Em intervalos regulares, o time reflete em como ficar mais efetivo, então, ajustam-se e otimizam seu comportamento de acordo.
+
+O Scrum é um framework (conjunto de ferramentas e padrões prontos para uso que ajudam no desenvolvimento) de software/projetos. Focado na entrega de valor e na melhoria contínua dos processos. A lógica por traz dessa metodologia é permitir que o produto evolua de forma iterativa e incremental. Divididos em sprints curtos, cada um com um objetivo claro e um conjunto específico de funcionalidades a serem entregues
+
+Product Owner, pela tradução, é “Dono do Produto”. Isso significa que essa é a pessoa encarregada de manter a qualidade do produto durante a execução e organizar as tarefas para que a entrega seja feita.
+
+O Scrum Master é a pessoa que mais conhece a metodologia Scrum no time, sendo responsável por nortear a equipe e oferecer suporte tanto ao PO quanto ao time de desenvolvimento.
+
+Artefatos do Scrum:
+
+Product Backlog é uma lista priorizada de todos os requisitos, funcionalidades, melhorias e correções que precisam ser feitas no produto a ser entregue.
+
+Sprint Backlog é uma sublista do Product Backlog, que definirá as funcionalidades que serão implementadas no próxima Sprint.
+
+Incremento de Produto é o resultado do trabalho realizado pela equipe de desenvolvimento durante o sprint, ou seja, é um conjunto de funcionalidades completas e testáveis que podem ser entregues ao cliente.

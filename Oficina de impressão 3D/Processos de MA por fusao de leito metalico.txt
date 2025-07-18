@@ -1,0 +1,25 @@
+Os processos de AM por fusão em leito de pó metálico ainda não são capazes de produzir peças que atendam aos requisitos de todas as aplicações, o que torna necessária a aplicação de pós-processamento, de maneira que algumas propriedades sejam alcançadas, como propriedades mecânicas, acabamento de superfície, rugosidade e geometria.
+
+Os métodos de acabamento de superfície podem ser: mecânicos, químicos ou físicos
+
+- Mecânicos: envolvem tratamento, deformação ou remoção da superfície do material a partir de outro material sólido a fim de deixar a peça mais agradável ao toque, com melhor aparência e menor retenção de resíduos na superfície, passivação superficial, redução de pontos de concentração de tensões superficiais e adequação às montagens em outros componentes e sistemas.
+
+	Jateamento: Bombardeamento de uma superfície com partículas abrasivas em alta velocidade que causa remoção de material e deformação plástica. O jateamento pode ser usado para limpeza e para garantir rugosidade às superfícies. 
+
+	Tamboreamento: Peças são inseridas a um tambor vibratório juntamente com um meio abrasivo, assim, elas começam a vibrar e girar. Esse movimento remove rebarbas, sujeiras e irregularidades nas peças, além de polir e dar acabamento às superfícies4
+
+	Eletropolimento: Um processo eletro-químico que envolve a remoção controlada de material superficial a fim de promover um acabamento mais uniforme e liso. A peça é imersa em um eletrólito condutor (condutor elétrico) com uma corrente elétrica aplicada, o que causa dissolução seletiva das irregularidades da superfície.
+
+	Outros mais comuns.
+
+- Químicos: Baseados nas reações química que ocorrem na interface entre o material e a solução, tendo como base de funcionamento a corrosão.
+	
+	tratamento químico: Atua na superfície da peça ao expor a peça a uma solução química, promovendo sua limpeza e rugosidade em função da condição inicial de acabamento, e se atacada por tempo o suficiente, a superfície final é determinada apenas pelo ataque químico
+
+	polimento eletroquímico: Similar ao ataque químico, porém com uma corrente elétrica externa. Tem o objetivo de obter superfícies espelhadas com pouca rugosidade. A peça é mergulhada em um eletrólito condutor juntamente com um cátodo, e ela serve como um ânodo, portanto vira um circuito. O polimento ocorre pela formação de uma camada viscosa na superfície que varia de espessura conforme o relevo, o que gera correntes maiores e menores, dissolvendo partes proporcionalmente às irregularidades, gerando uma superfície lisa
+
+	deposição química por vapor: Envolve reações químicas entre os produtos da fase gasosa e a superfície da peça, depositando um composto não volátil sobre a peça. As reações ocorrem na solução, e não sobre a peça em sí.
+
+- Físicos: Como não há reações químicas, a modificação de uma camada de superfície estão relacionadas às energias térmica, cinética e elétrica.
+	
+	Deposição física por vapor: É um processo de revestimento que envolve a vaporização de materiais metálicos e a condesação do material sobre peça para formar uma fina camada metálica de revestimento.

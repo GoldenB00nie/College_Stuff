@@ -1,0 +1,36 @@
+PMBOK, guia de gerenciamento de projetos concebido pelo PMI. Consolida todas as melhores práticas de GP e nos auxilia na concepção, planejamento, execução, monitoramento, controle e encerramento dos projetos.
+
+“Projeto é um esforço temporário empreendido para criar um produto, serviço ou resultado único”
+1. Tem um objetivo, 2. Escopo definido, 3. É temporário, 4. Tem custos determinados, 5. É único, 6. Há limitação de recursos, 7. É realizado por pessoas, 8. Gerência, 9. Coexiste com outros projetos e programas, 10. Tem Riscos associados
+
+Gerenciamento de projetos é a aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto com o intuito de concluir um projeto de acordo com o que foi planejado para ele.
+
+O gerente de projeto deve dar atenção aos seguintes aspectos:
+• CARACTERÍSTICAS - Identificar os requisitos do projeto a ser trabalhado.
+• LIMITES - Identificar as restrições do projeto;
+• PESSOAS ENVOLVIDAS - Identificar as partes interessadas no projeto e identi-
+ficar suas expectativas;
+• COMUNICAÇÃO ATIVA - Estabelecer e manter boa comunicação com as partes
+interessadas;
+• RECURSOS - Identificar os recursos (materiais, infraestrutura, equipamentos,
+financeiro etc) disponíveis e gerenciá-los;
+• EQUILÍBRIO – Manter o equilíbrio das áreas de conhecimento do projeto (Escopo,
+Cronograma, Custo, Qualidade, Recursos, Risco etc.).
+
+stakeholder – é um indivíduo, grupo ou instituição que pode afetar ou ser afetada por uma decisão, atividade ou resultado de um projeto. As partes interessadas do projeto podem: (1) ser internas ou externas ao projeto; (2) estar envolvidas ativa ou passivamente, ou não estar cientes do projeto; (3) impactar ou ser impactada positiva ou negativamente.
+
+O gerente de projetos é a pessoa destinada pela organização para liderar a equipe responsável por alcançar os objetivos do projeto. Além de quaisquer habilidades técnicas específicas e habilidades gerais de gerenciamento necessárias para o projeto, os gerentes de projetos devem ter no mínimo os seguintes atributos:
+I. Conhecimento sobre gerenciamento de projetos, o ambiente de
+negócios, aspectos técnicos;
+II. Habilidades necessárias para liderar com eficácia a equipe do projeto,
+coordenar o trabalho, colaborar com as partes interessadas, solucionar
+problemas e tomar decisões;
+III. Personalidade, atitude, ética e liderança.
+IV. Habilidades interpessoais:
+ Liderança;
+ Motivação;
+ Comunicação;
+ Influência;
+ Negociação;
+ Gerenciamento de conflitos; e
+ Coaching.

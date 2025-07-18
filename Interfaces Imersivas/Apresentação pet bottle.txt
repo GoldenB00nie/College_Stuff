@@ -1,0 +1,15 @@
+Apresentação pet bottle
+
+Parte do guilherme {
+
+Bom dia, meu nome é Guilherme Portas, e viemos apresentar o nosso projeto de Desenvolvimento de um Pet Bottle Filament Maker, que envolve reciclagem de resíduos plásticos para impressão 3D. Os pesquisadores desse projeto se consistem em mim, e o Thiago Gough, estudantes do terceiro e sétimo semestre, respectivamente, da faculdade IDP do distrito federal. E o nosso orientador é o professor Elias do Nascimento. Mas o que é esse pet bottle sei lá o que? Basicamente, é um dispositivo que pega uma garrafa PET e transforma ela em filamentos para serem usados em impressoras 3D. 
+
+Vamos explicar um pouco mais sobre esse processo depois, mas primeiramente, qual foi o principal problema que motivou o desenvolvimento desse projeto? De acordo com um estudo realizado pela WWF, o Brasil é o Quarto pais que mais gera lixo plástico mundialmente. O estudo aponta que aproximadamente, são só 4 milhões de toneladas mesmo? (Thiago: 10 milhões). Mais de 10 milhões de toneladas de volume plástico são vazados para os oceanos a cada ano. E vocês sabiam que segundo pesquisadores da UNIFESP, o tempo de decomposição dessas garrafas ultrapassa mais de cem anos? Isso é um absurdo, não podemos mais ficar poluindo o meio ambiente dessa forma. Então, como podemos reduzir os impactos ambientais das garrafas PETs descartadas no meio ambiente?
+
+Nessa disciplina, trabalhamos muito com conceitos tecnológicos para criação de projetos inovadores, portanto decidimos reutilizar esses recipientes para criação de filamentos para impressão 3D, uma técnica de manufatura aditiva que constroi objetos plásticos a partir do material usado, que é uma tira circular de plástico chamada de filamento, no qual é derretido no bico da impressora para construir o objeto camada por camada. Uma boa analogia é pensar como uma pistola de cola quente, onde o bico aquece e derrete o material para formar a peça. Então, a nossa proposta possui como objetivo geral a criação de um dispositivo de corte, e reciclagem dessas garrafas PETs para fabricação de filamentos para impressão 3D.
+
+Para especificar,  vamos criar um dispositivo que fatia a garrafas em rodelas para a ingestão do módulo da reciclagem,  Vamos também criar o dispositivo que recebe o plástico recortado e o transforma em filamento. Basicamente cortar e passar por esse dispositivo que aquece para amolecer o material e moldar a tira no formato do filamento. E por último, adequar o bico da empressora para a utilização desse filamento. Vale ressaltar também, que utilizamos alguns objetos impressos em 3D para auxiliar no corte do material. 
+
+Nós organizamos o projeto a partir da utilização da ferramenta Trello, onde pudemos fazer os requisitos dos materiais, a organização os modelos 3D para serem impressos, e os passos da montagem, juntamente com alguns links de referências, ferramentas e ideias para o projeto.
+
+}

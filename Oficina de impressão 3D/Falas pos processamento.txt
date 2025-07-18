@@ -1,0 +1,9 @@
+É possível remover os suportes e dar um melhor acabamento à peça a partir de métodos de pós-processamento, e esses podem ser mecânicos, químicos ou físicos.
+
+Os métodos de pós-processamento mecânicos envolvem tratamento, deformação ou remoção da superfície da pe a partir de outro material sólido a fim de deixar a peça mais agradável ao toque e com melhor aparência. Alguns processos comumente usados são: jateamento, que expõe a peça a um bombardeamento de partículas abrasivas em alta velocidade e garante rugosidade à peça, tamboreamento, onde são inseridas a um tambor vibratório junto de um meio abrasivo que remove rebarbas, sujeiras e irregularidades na peça, e o eletropolimento, que envolve a remoção controlada de material superficial a fim de promover um acabamento mais uniforme e liso.
+Aqui são uns antes e depois do processo de Jateamento e eletropolimento. 
+
+Já para os métodos químicos, eles são baseados em reações químicas entre o material e a solução, tendo como base de funcionamento a corrosão. Nele, temos o Tratamento químico, que ataca a superfície da peça, promovendo sua limpeza e rugosidade em função da condição inicial de acabamento, polimento eletroquímico, no qual é similar ao tratamento químico, porém contém uma corrente elétrica externa na qual cria uma camada viscosa nas irregularidades do material e as dissolve proporcionalmente ao nível da irregularidade, e a deposição química por vapor, onde vapores químicos são condensados na peça, criando uma camada não volátil sobre ela, que não evapora facilmente.
+Este é um antes e depois do processo de polimento eletroquímico.
+
+E finalmente, o método físico, no qual está relacionado às energias térmica, cinética e elétrica. E pode-se citar o processo de deposição física por vapor, na qual vaporiza materiais metálicos e estes são condensados para formar uma fina camada metálica sobre a peça. 

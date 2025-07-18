@@ -1,0 +1,17 @@
+Apresentacao Impressao 3d
+
+Bom dia, meu nome é Guilherme Portas, e eu vou falar sobre o Teste mais completo que a gente fez, em que testa praticamente todos os parâmetros da impressão que precisam ser ajustados, o All in One Calibration Cube, ou o que eu gosto de chamar de "o cubão".
+
+Nós decidimos imprimir esse teste graças a sua alta variedade de parâmetros que pudéssemos testar de uma só vez, o que melhorou bastante na eficiência do que precisávamos melhorar, e o que não precisa mexer, funcionando como uma peneira. Mas o que esse cubo milagroso tanto testa? Bom ele testa Overhangs, que testa qual o ângulo máximo que a peça pode ser impressa sem afetar significativamente na qualidade, bridging, que é o quanto o filamento pode ser impresso no ar em linha reta sem cair, Tolerâncias, que mostra o quão precisa está a sua impressora ao imprimir a sua peça, diâmetros, testa se a impressora é capaz de produzir circunferencias precisas, Stringing, as famosas teias de aranhas da impressão 3D, acurácia de formas e acurácia dimensional, testa se as dimensões da peça são corretas à que foi modelada.
+
+No teste dos overhangs, foram testados ângulos entre 0 a 90 graus, e foi identificado que em geral eles ficaram bons, com alguns ângulos maiores tendo maior dificuldade de impressão, o que é normal em impressão 3D. Devido a isso, não precisamos nos preocupar na calibração disso.
+
+No do Bridging, foram testados pontes de 5 a 25 mm de largura, e isso testa muito a capacidade de refrigeração do filamento. Também se saíram muito bem, com pouca deformação em distâncias maiores.
+
+O nosso teste de tolerância apontou que ela estava terrível, provavelmente porque os parâmetros ainda não estavam calibrados até o momento da impressão, porém para a fabricação das peças da impressora, foi julgado não necessário calibrar.
+
+Nessa parte dos testes, foram testados os diâmetros corretos do modelo, que tiveram resultados aceitáveis com variações mínimas, stringing, que foi notado uma grande presença até o momento, indicando que precisávamos calibrar mais os parâmetros de retração, e teste de parafusos, que não foram testados, já que não tínhamos parafusos para usar para testar. Porém esse teste está muito atrelado à tolerância, portanto podemos afirmar que também sairia não satisfatório os resultados.
+
+foi testado também acurácia de formas na impressão, como buracos quadrados e circulares de variados tamanhos. Não foi possível testar muito bem todas as formas já que se tornavam pequenos demais para serem capazes de ser medidos, porém os que conseguimos testar, estavam satisfatórios os resultados.
+
+E por último, o motivo desse teste ser um cubo: para testar a acurácia dimensional da impressão, que pôde ser verificado ao usar um paquímetro em cada eixo do objeto. O resultado saiu como planejado, produzindo um cubo 40 x 40 x 40 mm de altura, largura, e espessura.

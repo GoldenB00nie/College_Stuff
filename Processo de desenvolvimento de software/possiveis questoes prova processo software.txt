@@ -1,0 +1,31 @@
+1. Qual é a ordem correta das principais fases em um projeto, conforme recomendado pelo PMBOK?
+A) Encerramento, início, execução, planejamento, monitoramento.
+B) Início, planejamento, monitoramento, execução, encerramento.
+C) Planejamento, início, execução, encerramento, monitoramento.
+D) Início, planejamento, execução, monitoramento, encerramento.
+E) Início, execução, planejamento, encerramento, monitoramento.
+
+2. Conforme a explicação de cada fase, preencha as lacunas abaixo que correspondam corretamente à explicação de cada uma.
+
+A) No/a ________, Os desenvolvedores continuam monitorando o software em produção, identificando e corrigindo problemas conforme surgem. Além disso, o software pode precisar de atualizações para adicionar novos recursos. 7
+B) No/a ________, a equipe se concentra em compreender completamente as necessidades dos usuários e as especificações do sistema. Isso envolve a coleta de informações por meio de entrevistas, pesquisa de mercado e análise de documentos existentes. 2
+C) No/a ________, é quando o código real é escrito. Os desenvolvedores de software traduzem o projeto e o design em código de computador 4
+D) No/a ________, a equipe de desenvolvimento define o escopo do projeto, os objetivos, os requisitos e os recursos necessários, como a identificação das partes interessadas, o orçamento e o cronograma. 1
+E) No/a ________, o software passa por um processo de teste rigoroso. O objetivo é identificar e corrigir defeitos, garantindo que o software funcione conforme o esperado 5
+F) No/a ________, Com o software testado e aprovado, é hora de implantá-lo para uso pelos usuários finais. Isso envolve a instalação do software em servidores, a configuração de sistemas e a disponibilização para os usuários. 6
+G) No/a ________, a equipe desenvolve a estrutura geral para o sistema (o design de interface do usuário (UI) e de experiência do usuário (UX), diagramas de fluxo, esquemas de banco de dados e a definição de algoritmos). 3
+
+
+
+
+respostas:
+1. D
+2. {
+	A) Manutenção e evolução
+	B) Análise de requisitos
+	C) Implementação
+	D) Planejamento
+	E) Teste
+	F) Implatação
+	G) Projeto
+}

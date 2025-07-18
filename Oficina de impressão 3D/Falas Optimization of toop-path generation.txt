@@ -1,0 +1,37 @@
+Tendo em vista esses desafios, a pergunta é: como podemos melhorar a otimização das trajetórias para obter uma peça de boa qualidade? Podemos resolver esses desafios com um algorítmo de otimização de camadas que segue esses 3 passos:
+1. a determinação da inclinação da trajetória,
+2. geração de sub-trajetórias,
+3. conexão desses sub-caminhos.
+Vou explicar como cada um deles funciona.
+
+No passo 1, temos que encontrar e escolher a melhor inclinação para as trajetórias de impressão em cada camada. Essa escolha deve seguir esses três objetivos a fim de obter uma boa fabricação: 
+1. Um equilíbrio entre qualidade e eficiência,
+2. Minimizar o número de sub-trajetórias,
+3. Ter uma melhor ordem de sub-caminhos para obter o menor tempo de impressão possível
+
+Para isso, temos como escolher entre duas estratégias, focada em eficiência, ou focada em qualidade.
+
+Na estratégia focada em eficiência, nós buscamos otimizar a taxa de alimentação em extremidades conforme a aceleração e desaceleração, que se refere à velocidade que o material sai do extrusor. A variação dessa velocidade é calculada pela seguinte fórmula, onde F é a taxa de alimentação na quina e o alpha é o angulo entre os segmentos de linha atual para o adjacente. No artigo, foram coletadas 19 amostras de diferentes inclinações, cada uma variando de 10 em 10 graus, e essas amostras foram utilizadas para interpolar uma curva da variação da taxa de alimentação com diferentes inclinações. A partir do gráfico, foi encontrado que o melhor angulo de inclinação para maximizar a eficiência, foi de aproximadamente 60 graus.
+Aqui estão as taxas de variações em diferentes ângulos e o gráfico plotado.
+
+Aí temos a estratégia focada em qualidade, que busca otimizar a quantidade de preenchimento nas extremidades, para ficar o mais nivelado possível. Ela utiliza essas duas fórmulas que calculam as áreas de preenchimento com muito material e com pouco. Nelas, o R se trata da metade do comprimento do caminho e o theta é o angulo entre os dois segmentos de linha adjacentes, e é possível obter um gráfico de correlação entre a área S e o angulo theta ao plotar um gráfico. Ele mostra que angulos menores podem deixar mais áreas com essas variações de preenchimento, a qual indica que o objetivo é reduzir a quantidade de bordas bruscas no caminho da ferramenta. Assim, similarmente à outra proposta, foi interpolado um grafico com varias amostras de inclinacoes, e foi encontrado que o melhor ângulo para maximizar a qualidade foi de aproximadamente 110 graus.
+E aqui estão os esquemas de deposição, a correlação entre as variações de preenchimento e as inclinações e o gráfico de quantidade de extremidades em comparação ao de variações de preenchimento em diferentes angulos.
+
+O objetivo do passo 2 é a geração de sub-trajetórias a partir das linhas de referência com a inclinação obtida e os limites da peça. que cria varios sub-caminho iniciais e depois são divididos novamente em mais caminhos, separando um lado do outro. Assim, todos os limites são numerados e é feita uma estrutura contendo informações de quatro potenciais pontos em cada sub-caminho, cada um com um índice do limite, e outro com um índice do ponto, determinado de acordo com as suas posições nos limites e incrementados no sentido horário.
+Aqui uma demonstração de como ficam os caminhos depois desse procedimento.
+
+E no passo 3, nós conectamos os caminhos a partir dos pontos de cada caminho. Existem 3 critérios para saber se dois pontos são conectáveis:
+1. Os dois pontos devem estar a uma distancia perpendicular igual a duas linhas de varredura adjacentes,
+2. Os dois tem que estar em um mesmo limite, ou seja, possuir mesmo BoundaryIndex,
+3. O PointIndex deles devem denotar que um é o primeiro ponto, e o outro é o último ponto em um mesmo limite.
+
+Se atenderem a esses critérios, os dois pontos são conectados. Depois desse processo, algumas sub-regiões são mutuamente conectadas e a quantidade de sub-trajetórias é drasticamente reduzido.
+Aqui um exemplo dessas conexões.
+
+Porém, esse não é o máximo que podemos otimizar, e tem um outro método que reduz ainda mais a quantidade a quantidade de sub-caminhos. Para fazer isso, nós recalculamos o primeiro ponto das sub-regiões a fim de adicionar outras regiões excluídas pela má escolha do ponto inicial, porém nem todos poderão ser conectados, eles precisam atender às seguintes condições:
+1. Todas as extremidades da esquerda e direita tem que ter o mesmo BoundaryIndex,
+2. O PointIndex de todos os pontos da esquerda ou direita tem que finalizar em sucessão
+
+As regiões que também não atenderam a esses critérios são conectados a partir de uncut-paths, que basicamente significa que a ferramenta tem que viajar por uma distância até poder continuar a impressão no novo caminho, e a próxima trajetória da ferramenta sendo escolhida por um algorítmo greedy, que só pensa no atual, descartando futuras escolhas. Após isso, não há mais nenhuma outra otimização a ser feita para diminuir a quantidade de sub-caminhos.
+
+Porém, se os sub-caminhos forem conectados com linhas baseado em ordem determinadas, as extremidades ficariam com má qualidade por causa da aceleracao e desaceleracao. Por isso, é mencionado um tipo de curva parametrica chamado de spline, que é introduzido nesse artigo para conectar sub-caminhos. Duas pontas sao definidas para serem tangentes a segmentos de linhas de dois sub-caminhos, o que significa que a taxa de alimentacao nao precisa mudar, entao a aceleracao e desaceleracao nesses locais sao evitados. Usamos essa estratégia quando o numero de caminhos nao cortados é muito grande, podendo melhorar significativamente a qualidade de deposição.
