@@ -1,0 +1,41 @@
+Redes - última aula de redes
+
+
+- Endereçamento com classe: A - máscara /8 - 10.0.0.0 - 255.0.0.0 (PRIMEIRO OCTETO SETADO)
+
+
+. B - máscara /16 - 172.168.0.0 - 255.255.0.0 (DOIS OCTETOS SETADOS)
+
+ C - máscara /24 - 192.168.1.0 - 255.255.255.0 (TRÊS OCTETOS SETADOS)
+
+- Rede sem indicação da máscara não significa algo
+
+- o que não varia é o ultimo octeto (por exemplo da máscara /24), vai definir o numero de hosts que estão conectadas no IP.
+
+- Existem dois IPs que não podem ser utilizados, o que termina em 0 (endereço de ip oficial da rede) e o 255 (que é o broadcast)
+
+- Multicast manda mensagem para um grupo
+
+- IPv4 já está escasso, dizem que a microsoft possui o restante.
+
+- O firewall faz o controle de entrada e saída.
+
+- A rede DMZ (192.168.1.0/24) - zona desmilitarizada, não deixar ter acesso a ServerFarm (rede mais crítica - 10.10.0.0/16) - por isso a DMZ passa pelo firewall (o mundo pode ter acesso à DMZ). 
+
+- Existe um ip interno e um ip externo (que o mundo conhece) -> Os ips são escassos, endereçamento interno da rede pode se repetir, mas externo não (ip público). Estratégia para aproveitamento melhor dos IPs - utiliza-se um protocolo chamado NAT (Network Adress Translation): 192.168.1.2(ip interno) -NAT> 200.152.10.0 (ip externo).
+
+------------------- Endereço Classless (sem classe) ----------
+
+- veja o ip: 200.23.16.0/23 (máscara /23).
+
+- macete para calcular binário: 2^7(128) - 2^6(64) - 2^5 ----- 2^0  (setar aquilo que foi somado para dar o valor) - 11001000
+
+- para uma máscara /23 -> 2^9 - 2 = 510
+
+- O custo das máscaras está no RANGE que ela pode agir, uma máscara /16 é como se fosse um estádio de futebol, então pode haver duas pessoas nesse estádio, mas a infraestrutura precisa alcançá-los, então é um gasto desnecessário. por isso é necessário o classless, para ser o mais específico e gastar menos com infraestrutura. Também, uma máscara /16 pode fazer um congestionamento de pacotes em um DHCP por exemplo, que é desnecessário.
+
+- perguntas da prova: qntos ips validos? qual o end. de rede? qual o endereço de broadcast? qual o gateway de cada rede?
+
+- Para finalizar, sumarização de rota: máscara 26 - quanto mais você aumenta o tamanho da máscara, mais você diminui quantidade de hosts e pegando p ip para você.
+
+- Sumarizar é guardar váras redes (por exemplo /26) em uma /24, que engloba todas.
